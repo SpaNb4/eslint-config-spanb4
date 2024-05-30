@@ -1,0 +1,25 @@
+{
+  "name": "@spanb4/eslint-config-spanb4",
+  "version": "1.0.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepack": "npm run bundle",
+    "bundle": "rimraf node_modules && mkdir -p node_modules/@spanb4/eslint-plugin-microfrontend && cp -R ../eslint-plugin-microfrontend/* node_modules/@spanb4/eslint-plugin-microfrontend"
+  },
+  "author": "Dzmitry Yarmoshkin",
+  "license": "ISC",
+  "bundledDependencies": [
+    "@spanb4/eslint-plugin-microfrontend"
+  ],
+  "dependencies": {
+    "@rushstack/eslint-patch": "^1.10.3",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "@spanb4/eslint-plugin-microfrontend": "file:../eslint-plugin-microfrontend"
+  }
+}
